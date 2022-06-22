@@ -1,0 +1,64 @@
+.mint__container {
+    display: flex;
+    height: 20rem;
+    background-image: linear-gradient(.25turn, black, 50%, rgb(54, 53, 53));
+    margin-top: 1rem;
+    font-family: Overpass;
+    text-shadow: 2px 2px 4px black;
+}
+
+.mint__description {
+    background-color: transparent;
+    padding: 2rem 6rem 2rem 6rem;
+    max-width: 30rem;
+}
+
+.mint__description__words {
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+.mint__description__grey {
+    text-align: center;
+    background-color: transparent;
+    color: grey;
+    padding-top: 2rem;
+} 
+
+.mint__description__header {
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.mint__form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 2px white solid;
+    box-shadow: 2px 2px #da4b4b;
+}
+
+.mint__form__header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.mint__submit {
+    background-color: rgb(204, 76, 76);
+    padding: .3rem 1.5rem;
+    transition: .1s all ease-in-out;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px black;
+    margin-top: 1.5rem;
+}
+
+.mint__submit:hover {
+    background-color: rgb(105, 40, 40);
+    box-shadow: inset 0px 0px 5px black;
+    color: gray;
+}
+
+.mint__form__labels {
+    padding: .2rem;
+}

@@ -1,0 +1,54 @@
+.header__container {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(39, 39, 39);
+    text-shadow: 3px 3px 5px black;
+}
+
+.header__logo {
+    font-size: 4rem;
+    background-color: rgb(39, 39, 39);
+    padding-right: 3rem;
+}
+
+.header__links {
+    background-color: rgb(39, 39, 39);
+}
+
+.header__seperate{ 
+    background-color: rgb(39, 39, 39);
+    transition: .5s ease-out all;
+}
+
+.header__seperate:hover{ 
+    text-shadow: 2px 2px 12px rgb(241, 15, 15);
+    color: rgb(21, 24, 24);
+}
+
+.connect-btn {
+    background-color: rgb(204, 76, 76);
+    padding: .3rem 1.5rem;
+    transition: .1s all ease-in-out;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px black;
+}
+
+.connect-btn:hover {
+    background-color: rgb(105, 40, 40);
+    box-shadow: inset 0px 0px 5px black;
+    color: gray;
+}
+
+.sc_link {
+    background-color: transparent;
+    text-align: center;
+    justify-content: center;
+}
+
+.sc_link:hover {
+    background-color: transparent;
+    color: gray;
+}
