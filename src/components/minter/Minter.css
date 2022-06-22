@@ -29,6 +29,7 @@
     background-color: transparent;
     font-size: 1.5rem;
     text-align: center;
+    color: #da4b4b;
 }
 
 .mint__form {
@@ -36,7 +37,7 @@
     flex-direction: column;
     padding: 2rem;
     border: 2px white solid;
-    box-shadow: 2px 2px #da4b4b;
+    box-shadow: 6px 6px #da4b4b;
 }
 
 .mint__form__header {

@@ -10,7 +10,7 @@ const Minter = () => {
           The cost of minting will only be the cost of gas. You will be allowed up to 3 Accounts per Wallet.
           <br/> Choose your username, a short bio, and an IPFS Image URI. The IPFS image URI will require you to upload a photo on IPFS and paste the URI here. 
         </article>
-        <article className='mint__description__grey'>Click <a href="/" className="sc_link">Here</a> to view the Smart Contract code</article>
+        <article className='mint__description__grey'>Click <a href="/" className="sc_link">Here</a> to learn more about token URIs and IPFS</article>
       </div>
       <form className="mint__form">
         <div className="mint__form__header">--SOULBOUND ACCOUNT FORM--</div>
