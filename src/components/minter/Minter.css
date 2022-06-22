@@ -62,4 +62,9 @@
 
 .mint__form__labels {
     padding: .2rem;
+    background-color: transparent;
+}
+
+.wingslogo {
+    background-color: transparent;
 }

@@ -1,10 +1,16 @@
 import React from 'react'
 import './header/Header.css'
 
-const ConnectButton = () => {
+interface Props{
+  account: string;
+  setAccount: React.Dispatch<React.SetStateAction<string>>;
+  connectAccount: any;   
+};
+
+const ConnectButton = ({ account, setAccount, connectAccount }: Props) => {
   return (
-    <button className='connect-btn'>Connect</button>
+    <button className='connect-btn' onClick={connectAccount}>Connect</button>
   )
 }
 
-export default ConnectButton
+export default ConnectButton;

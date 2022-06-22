@@ -1,7 +1,23 @@
 import React from 'react'
 import './Minter.css'
 
-const Minter = () => {
+type Props = {
+  account: string;
+  tokenUsername: string;
+  setTokenUsername: React.Dispatch<React.SetStateAction<string>>;
+  tokenBio: string;
+  setTokenBio: React.Dispatch<React.SetStateAction<string>>;
+  tokenURI: string;
+  setTokenURI: React.Dispatch<React.SetStateAction<string>>;
+}
+
+//TODO LIST:
+// 1) Need to add functionality to the Submit Button and Inputs (State Changes)
+// 2) Incorporate ether.js to call the 'issue' SC function with the URI, Username, and Bio
+// 3) Add a Logo or Halo or something to make it look cooler
+// 4) Fix the fucking center logo being in the center
+
+const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio, tokenURI, setTokenURI}: Props) => {
   return (
     <div className='mint__container'>
       <div className="mint__description">

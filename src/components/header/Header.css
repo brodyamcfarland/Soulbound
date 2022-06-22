@@ -4,32 +4,32 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: rgb(39, 39, 39);
+    background-color: #272727;
     text-shadow: 3px 3px 5px black;
 }
 
 .header__logo {
     font-size: 4rem;
-    background-color: rgb(39, 39, 39);
+    background-color: #272727;
     padding-right: 3rem;
 }
 
 .header__links {
-    background-color: rgb(39, 39, 39);
+    background-color: #272727;
 }
 
 .header__seperate{ 
-    background-color: rgb(39, 39, 39);
-    transition: .5s ease-out all;
+    background-color: #272727;
+    transition: .2s ease-out all;
 }
 
 .header__seperate:hover{ 
-    text-shadow: 2px 2px 12px rgb(62, 212, 212);
-    color: rgb(21, 24, 24);
+    text-shadow: 0px 0px 3px white;
+    color: rgb(0, 0, 0);
 }
 
 .connect-btn {
-    background-color: rgb(204, 76, 76);
+    background-color: #cc4c4c;
     padding: .3rem 1.5rem;
     transition: .1s all ease-in-out;
     border-radius: 1rem;
@@ -37,7 +37,7 @@
 }
 
 .connect-btn:hover {
-    background-color: rgb(105, 40, 40);
+    background-color: #692828;
     box-shadow: inset 0px 0px 5px black;
     color: gray;
 }
@@ -51,4 +51,31 @@
 .sc_link:hover {
     background-color: transparent;
     color: gray;
+}
+
+.header__connected {
+    background-color: #692828;
+    border-radius: 1rem;
+    padding: .3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 5px black;
+}
+
+.connected__disconnect {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__disconnect {
+    background-color: transparent;
+    border: none;
+    color: gray;
+}
+
+.header__disconnect:hover {
+    color: #353535;
 }
