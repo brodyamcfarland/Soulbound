@@ -21,7 +21,7 @@ const ABI = [
   "function tokenBio(uint256 tokenId) public view returns (string memory)"
 ]
 
-const address = '0xF49f1a457F7EA85E3ee2F669B09Df9313281268b'; //Soulbound SC Address
+const address = '0x579F5b6282C67A394Ce341BDa1616Af7Ef6BB887'; //Soulbound SC Address
 
 const contract = new ethers.Contract(address, ABI, provider);
 
@@ -62,6 +62,7 @@ function App() {
         setTokenBio={setTokenBio}
         tokenURI={tokenURI}
         setTokenURI={setTokenURI}
+        provider={provider}
       />
       <Footer/>
     </>

@@ -15,7 +15,7 @@ declare global {
 
 const Header = ({ account, setAccount }: Props) => {
   
-  const isConnected = Boolean(account[0]);
+  const isConnected = Boolean(account);
 
      async function connectAccount() {
         if (window.ethereum) {

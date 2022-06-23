@@ -5,8 +5,9 @@ import "./ERC4973.sol";
 
 contract SoulBound is ERC4973 {
     address public owner;
-    uint256 public count = 0;
-    uint256 public mintcap = 2; //Mint Cap will be 3 Accounts Total
+    mapping(address => uint256) public walletMints;
+    uint public MaxPerWallet = 2; // This sets Max to 3.
+    uint public count;
 
     constructor () ERC4973("Soulbound", "SOUL") {
         owner = msg.sender;
@@ -18,9 +19,10 @@ contract SoulBound is ERC4973 {
     }
 
     function issue(address _issuee, string calldata _uri, string calldata username, string calldata bio) external {
-        require(count <= mintcap, "Only 3 Soulbound Accounts Allowed.");
+        require(walletMints[msg.sender] <= MaxPerWallet, "Only 3 Soulbound Accounts Allowed.");
         _mint(_issuee, count, _uri, username, bio);
         count += 1;
+        walletMints[msg.sender]++;
     }
 
     modifier onlyOwner() {
