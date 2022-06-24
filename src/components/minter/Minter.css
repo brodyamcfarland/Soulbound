@@ -5,17 +5,18 @@
     margin-top: 1rem;
     font-family: Overpass;
     text-shadow: 2px 2px 4px black;
+    justify-content: space-between;
 }
 
 .mint__description {
     background-color: transparent;
-    padding: 2rem 6rem 2rem 6rem;
+    padding: 2rem 2rem 2rem 6rem;
     max-width: 30rem;
 }
 
 .connected__promo {
     background-color: transparent;
-    padding: 2rem 6rem 2rem 6rem;
+    padding: 2rem 6rem 2rem 2rem;
     max-width: 30rem;
     padding-top: 3rem;
 }
@@ -84,6 +85,7 @@
     background-color: #692828;
     box-shadow: inset 0px 0px 5px black;
     color: gray;
+    cursor: pointer;
 }
 
 .mint__form__labels {
@@ -91,6 +93,3 @@
     background-color: transparent;
 }
 
-.wingslogo {
-    background-color: transparent;
-}

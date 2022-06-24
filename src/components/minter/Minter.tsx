@@ -14,9 +14,9 @@ type Props = {
 }
 
 //TODO LIST:
-// 2) Smart Contract require statement on issue() is fucked up, i think i need to map count to an adress
 // 3) Add a Logo or Halo or something to make it look cooler
-// 4) Fix the fucking center logo being in the center
+// 4) Fix the center logo being in the center
+// 5) Mobile Responsiveness
 
 const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio, tokenURI, setTokenURI}: Props) => {
 
@@ -46,15 +46,15 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
   return (
     <div className='mint__container'>
       <div className="mint__description">
-        <h1 className='mint__description__header'>--MINTING--</h1>
+        <h1 className='mint__description__header'>-- MINTING --</h1>
         <article className='mint__description__words'>
           The cost of minting will only be the cost of gas. You will be allowed up to 3 Accounts per Wallet.
           <br/> Choose your username, a short bio, and an IPFS Image URI. The IPFS image URI will require you to upload a photo on IPFS and paste the URI here. 
         </article>
-        <article className='mint__description__grey'>Click <a href="/" className="sc_link">Here</a> to learn more about token URIs and IPFS</article>
+        <article className='mint__description__grey'>Click <a href="https://docs.ipfs.io/how-to/best-practices-for-nft-data/#types-of-ipfs-links-and-when-to-use-them#ipfs-uri" target="_blank" className="sc_link">Here</a> to learn more about token URIs and IPFS</article>
       </div>
       <form className="mint__form" onSubmit={handleSubmit}>
-        <div className="mint__form__header">--SOULBOUND ACCOUNT FORM--</div>
+        <div className="mint__form__header">-- SOULBOUND ACCOUNT FORM --</div>
         <div className="mint__form__labels">Please enter a Username:</div>
         <input onChange={ (e) =>setTokenUsername(e.target.value)}type="text" className="username" placeholder='Enter Username...'/>
         <div className="mint__form__labels">Please enter a Bio:</div>

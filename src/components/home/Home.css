@@ -5,14 +5,17 @@
     margin-top: 1rem;
     font-family: Overpass;
     text-shadow: 2px 2px 4px black;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .home__imagebanner img {
-    width: 40rem;
+    width: 35rem;
     height: 20rem;
     padding: 0rem;
     border: 2px solid white;
     box-shadow: 6px 6px #3e8dac;
+    margin-left: 6rem;
 }
 
 .home__description__words {
@@ -22,9 +25,9 @@
 
 .home__description {
     background-color: transparent;
-    padding: 2rem 10rem 2rem 10rem;
-    max-width: 50rem;
-    text-align: center;
+    padding: 1rem 2rem;
+    max-width: 40rem;
+    text-align: left;
 } 
 
 .home__description__header {
@@ -49,4 +52,40 @@
     background-color: transparent;
     color: grey;
     padding-top: 2rem;
+}
+
+.circled__numbers {
+    border: 1px solid #000000;
+    padding: .25rem .6rem;
+    border-radius: 2rem;
+    background-color: #da4b4b;
+    box-shadow: 3px 3px 5px black;
+    margin-right: 1rem;
+    transition: .2s ease-in-out all;
+}
+
+.circled__numbers:hover {
+    background-color: #692828;
+    box-shadow: inset 0px 0px 5px black;
+    color: gray;    
+}
+
+.steps {
+    background-color: transparent;
+    padding-top: 1rem;
+    padding-right: 6rem;
+
+}
+
+.steps__description__header {
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #3e8dac;
+}
+
+.list__text {
+    background-color: transparent;
+    padding-bottom: .8rem;
+    padding-left: .2rem;
 }

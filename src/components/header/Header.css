@@ -40,6 +40,7 @@
     background-color: #692828;
     box-shadow: inset 0px 0px 5px black;
     color: gray;
+    cursor: pointer;
 }
 
 .sc_link {
