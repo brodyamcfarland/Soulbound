@@ -93,3 +93,29 @@
     background-color: transparent;
 }
 
+/*===================================MEDIA QUERIES==============================================*/
+/*Normal Monitors [1201px -> 1920px]*/ 
+@media only screen and (max-width: 1920px){
+ 
+}
+/*Tablets [601px -> 1200px]*/
+@media only screen and (max-width: 1420px){
+    .mint__container {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+    
+ 
+}
+/*Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 600px){
+
+    
+}
+/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px){
+
+ 
+}

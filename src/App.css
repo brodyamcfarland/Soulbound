@@ -2,7 +2,14 @@
 
 * {
   font-family: VT323;
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   background-color: black;
   color: white;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.maincontent {
+  display: grid;
+  grid-template-columns: 1fr;
 }

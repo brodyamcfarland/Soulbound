@@ -53,18 +53,19 @@ function App() {
   return (
     <>
       <Header account={account} setAccount={setAccount} />
-      <Home/>
-      <Minter 
-        account={account}
-        tokenUsername={tokenUsername}
-        setTokenUsername={setTokenUsername}
-        tokenBio={tokenBio}
-        setTokenBio={setTokenBio}
-        tokenURI={tokenURI}
-        setTokenURI={setTokenURI}
-        provider={provider}
-      />
-      <Footer/>
+      <div className='maincontent'>
+        <Home/>
+        <Minter 
+          account={account}
+          tokenUsername={tokenUsername}
+          setTokenUsername={setTokenUsername}
+          tokenBio={tokenBio}
+          setTokenBio={setTokenBio}
+          tokenURI={tokenURI}
+          setTokenURI={setTokenURI}
+          provider={provider}
+        />
+      </div>
     </>
   );
 }

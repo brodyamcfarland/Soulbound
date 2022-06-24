@@ -58,9 +58,9 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
         <div className="mint__form__labels">Please enter a Username:</div>
         <input onChange={ (e) =>setTokenUsername(e.target.value)}type="text" className="username" placeholder='Enter Username...'/>
         <div className="mint__form__labels">Please enter a Bio:</div>
-        <input onChange={ (e) =>setTokenBio(e.target.value)}type="text" className="bio" placeholder='Full-Stack Blockchain Dev'/>
+        <input onChange={ (e) =>setTokenBio(e.target.value)}type="text" className="bio" placeholder='Enter bio...'/>
         <div className="mint__form__labels">Please enter a IPFS image URI:</div>
-        <input onChange={ (e) =>setTokenURI(e.target.value)}type="text" className="tokenURI" placeholder='ipfs://QmVsNGRmQZhsqxyRfpQK8rZcksG8m5jeQtvMF7t52dAEw4/1.png'/>
+        <input onChange={ (e) =>setTokenURI(e.target.value)}type="text" className="tokenURI" placeholder='ipfs://...'/>
         <div className='btn_container'>
           <button className="mint__submit">Submit</button>
         </div>

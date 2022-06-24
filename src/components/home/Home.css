@@ -18,6 +18,10 @@
     margin-left: 6rem;
 }
 
+.home__imagebanner {
+    background-color: transparent;
+}
+
 .home__description__words {
     background-color: transparent;
     font-size: 1.2rem;
@@ -25,8 +29,8 @@
 
 .home__description {
     background-color: transparent;
-    padding: 1rem 2rem;
-    max-width: 40rem;
+    padding: 1rem 0rem;
+    max-width: 25rem;
     text-align: left;
 } 
 
@@ -88,4 +92,49 @@
     background-color: transparent;
     padding-bottom: .8rem;
     padding-left: .2rem;
+}
+
+/*===================================MEDIA QUERIES==============================================*/
+/*Normal Monitors [1201px -> 1920px]*/ 
+@media only screen and (max-width: 1920px){
+    .home__imagebanner img {
+        margin-left: 1rem;
+    }
+    .steps {
+        background-color: transparent;
+        padding-top: 1rem;
+        padding-right: 2rem;
+    }
+ 
+}
+/*Tablets [601px -> 1200px]*/
+@media only screen and (max-width: 1420px){
+    .home__container {
+        display: grid;
+        justify-content: space-between;
+    }
+
+    .home__imagebanner img {
+        width: 30rem;
+        height: 17.5rem;
+        padding: 0rem;
+        margin-left: 8rem;
+    }
+    
+ 
+}
+/*Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 600px){
+
+    
+}
+/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px){
+    .home__imagebanner img {
+        width: 20rem;
+        height: 13rem;
+        padding: 0rem;
+        margin-left: 0rem;
+    }
+ 
 }

@@ -1,25 +1,24 @@
 .header__container {
     display: flex;
-    padding: 2rem 4rem;
+    padding: 1rem 8rem;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: #272727;
+    background: linear-gradient(#3b3b3b, black);
     text-shadow: 3px 3px 5px black;
 }
 
 .header__logo {
     font-size: 4rem;
-    background-color: #272727;
-    padding-right: 3rem;
+    background-color: transparent;
 }
 
 .header__links {
-    background-color: #272727;
+    background-color: transparent;
 }
 
 .header__seperate{ 
-    background-color: #272727;
+    background-color: transparent;
     transition: .2s ease-out all;
 }
 
@@ -79,4 +78,39 @@
 
 .header__disconnect:hover {
     color: #353535;
+}
+
+/*===================================MEDIA QUERIES==============================================*/
+/*Normal Monitors [1201px -> 1920px]*/ 
+@media only screen and (max-width: 1920px){
+ 
+}
+/*Tablets [601px -> 1200px]*/
+@media only screen and (max-width: 1200px){
+    .header__container {
+        padding: 1rem 2rem;
+    }
+ 
+}
+/*Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 820px){
+    .header__logo {
+        font-size: 3rem;
+    }
+    .header__container {
+        flex-direction: column;
+        gap: 1rem;
+
+    }    
+}
+/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px){
+    .header__logo {
+        font-size: 3rem;
+    }
+    .header__container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+ 
 }
