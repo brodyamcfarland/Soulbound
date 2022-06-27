@@ -13,11 +13,6 @@ type Props = {
   provider: ethers.providers.JsonRpcProvider
 }
 
-//TODO LIST:
-// 3) Add a Logo or Halo or something to make it look cooler
-// 4) Fix the center logo being in the center
-// 5) Mobile Responsiveness
-
 const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio, tokenURI, setTokenURI}: Props) => {
 
   // const INFURA_ID = '9c3402c884734a42bd435d171f6b49fa';

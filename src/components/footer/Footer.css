@@ -1,0 +1,30 @@
+.container_footer {
+    width: 100vw;
+    display:flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.social_links {
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.social__icons {
+    font-size: 1.2rem;
+    transition: all ease-in-out .3s;
+}
+
+.copywright_tag {
+    font-size: 1rem;
+    padding-bottom: .3rem;
+}
+
+.social__icons:hover {
+    color: rgb(221, 21, 21);
+    background-color: rgb(216, 83, 83);
+}

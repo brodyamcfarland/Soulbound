@@ -9,3 +9,6 @@ Scope:  This website allows you to mint a soulboul tokens (SBT's) that records t
         These SBT's will be integrated with c0nn3ct3d social media platform.
 
         
+//TODO LIST:
+// 3) Add a Logo or Halo or something to make it look cooler
+// 5) Mobile Responsiveness (May have to switch to grid)

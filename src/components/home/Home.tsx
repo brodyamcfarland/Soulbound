@@ -14,7 +14,7 @@ const Home = () => {
         <article className='home__description__grey'>Click <a href="https://github.com/brodyamcfarland/Soulbound" target='_blank' className="sc_link">Here</a> to view the Smart Contract code</article>
       </div>
       <div className="steps">
-      <h1 className='steps__description__header'>-- How to Mint --</h1>
+        <h1 className='steps__description__header'>-- How to Mint --</h1>
         <ul className='list__text'><span className='circled__numbers'>1</span>Connect to MetaMask with the Connect Button</ul>
         <ul className='list__text'><span className='circled__numbers'>2</span>Fill out the --SOULBOUND ACCOUNT FORM--</ul>
         <ul className='list__text'><span className='circled__numbers'>3</span>Click "Submit" and pay the gas fee</ul>

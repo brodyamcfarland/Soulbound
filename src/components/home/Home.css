@@ -1,21 +1,19 @@
 .home__container {
-    display: flex;
-    height: 20rem;
-    background-image: linear-gradient(.25turn, rgb(54, 53, 53), 50%, black);
-    margin-top: 1rem;
-    font-family: Overpass;
-    text-shadow: 2px 2px 4px black;
-    justify-content: space-between;
-    gap: 1rem;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     justify-content: space-between;
+     background-image: linear-gradient(to left, black, 65%, #363535);
+     text-align: center;
+     text-shadow: 2px 2px 4px black;
+     place-items: center;
+     padding: 2rem;   
 }
 
 .home__imagebanner img {
-    width: 35rem;
-    height: 20rem;
-    padding: 0rem;
+    max-width: 35rem;
+    max-height: 20rem;
     border: 2px solid white;
-    box-shadow: 6px 6px #3e8dac;
-    margin-left: 6rem;
+    box-shadow: 6px 6px #3bc8ff;
 }
 
 .home__imagebanner {
@@ -29,7 +27,6 @@
 
 .home__description {
     background-color: transparent;
-    padding: 1rem 0rem;
     max-width: 25rem;
     text-align: left;
 } 
@@ -38,7 +35,7 @@
     background-color: transparent;
     font-size: 1.5rem;
     text-align: center;
-    color: #3e8dac;
+    color: #3bc8ff;
 }
 
 .home__codeimage {
@@ -76,65 +73,56 @@
 
 .steps {
     background-color: transparent;
-    padding-top: 1rem;
-    padding-right: 6rem;
-
+    text-align: left;
 }
 
 .steps__description__header {
     background-color: transparent;
     font-size: 1.5rem;
     text-align: center;
-    color: #3e8dac;
+    color: #3bc8ff;
 }
 
 .list__text {
     background-color: transparent;
-    padding-bottom: .8rem;
-    padding-left: .2rem;
+    padding-bottom: 1rem;
 }
 
 /*===================================MEDIA QUERIES==============================================*/
 /*Normal Monitors [1201px -> 1920px]*/ 
 @media only screen and (max-width: 1920px){
-    .home__imagebanner img {
-        margin-left: 1rem;
-    }
-    .steps {
-        background-color: transparent;
-        padding-top: 1rem;
-        padding-right: 2rem;
-    }
+    
  
 }
 /*Tablets [601px -> 1200px]*/
 @media only screen and (max-width: 1420px){
     .home__container {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-    }
-
+        gap: 1.5em;
+   }
     .home__imagebanner img {
         width: 30rem;
         height: 17.5rem;
-        padding: 0rem;
-        margin-left: 8rem;
+        margin-top: 1rem;
     }
-    
- 
 }
 /*Big smartphones [426px -> 600px]*/
 @media only screen and (max-width: 600px){
-
-    
-}
-/*Small smartphones [325px -> 425px]*/
-@media only screen and (max-width: 425px){
     .home__imagebanner img {
-        width: 20rem;
-        height: 13rem;
+        width: 23rem;
+        height: 15rem;
         padding: 0rem;
         margin-left: 0rem;
     }
- 
+
+}
+/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px){
+   .home__imagebanner img {
+    width: 19rem;
+    height: 10rem;
+    padding: 0rem;
+    } 
 }

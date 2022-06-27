@@ -65,6 +65,7 @@ function App() {
           setTokenURI={setTokenURI}
           provider={provider}
         />
+        <Footer/>
       </div>
     </>
   );

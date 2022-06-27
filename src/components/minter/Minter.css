@@ -1,24 +1,22 @@
 .mint__container {
-    display: flex;
-    height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
     background-image: linear-gradient(.25turn, black, 65%, #363535);
     margin-top: 1rem;
-    font-family: Overpass;
     text-shadow: 2px 2px 4px black;
-    justify-content: space-between;
+    place-items: center;
+    padding: 2rem;
 }
 
 .mint__description {
     background-color: transparent;
-    padding: 2rem 2rem 2rem 6rem;
     max-width: 30rem;
 }
 
 .connected__promo {
     background-color: transparent;
-    padding: 2rem 6rem 2rem 2rem;
     max-width: 30rem;
-    padding-top: 3rem;
 }
 
 .connected__header {
@@ -101,21 +99,33 @@
 /*Tablets [601px -> 1200px]*/
 @media only screen and (max-width: 1420px){
     .mint__container {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 4rem;
+        gap: 1.5rem;
     }
     
  
 }
 /*Big smartphones [426px -> 600px]*/
 @media only screen and (max-width: 600px){
-
+    .mint__form {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border: 2px white solid;
+        box-shadow: 6px 6px #da4b4b;
+        width: 24rem;
+    }
     
 }
 /*Small smartphones [325px -> 425px]*/
 @media only screen and (max-width: 425px){
-
+    .mint__form {
+        padding: 1rem;
+        border: 2px white solid;
+        box-shadow: 6px 6px #da4b4b;
+        width: 20rem;
+    }
  
 }

@@ -100,7 +100,6 @@
     .header__container {
         flex-direction: column;
         gap: 1rem;
-
     }    
 }
 /*Small smartphones [325px -> 425px]*/
