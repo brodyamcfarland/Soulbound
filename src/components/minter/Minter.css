@@ -97,12 +97,13 @@
  
 }
 /*Tablets [601px -> 1200px]*/
-@media only screen and (max-width: 1420px){
+@media only screen and (max-width: 1700px){
     .mint__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 1.5rem;
+        padding: 4rem;
     }
     
  
@@ -127,5 +128,5 @@
         box-shadow: 6px 6px #da4b4b;
         width: 20rem;
     }
- 
+   
 }

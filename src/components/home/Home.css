@@ -95,12 +95,13 @@
  
 }
 /*Tablets [601px -> 1200px]*/
-@media only screen and (max-width: 1420px){
+@media only screen and (max-width: 1700px){
     .home__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 1.5em;
+        padding: 4rem;
    }
     .home__imagebanner img {
         width: 30rem;
@@ -121,8 +122,8 @@
 /*Small smartphones [325px -> 425px]*/
 @media only screen and (max-width: 425px){
    .home__imagebanner img {
-    width: 19rem;
-    height: 10rem;
-    padding: 0rem;
-    } 
+        width: 19rem;
+        height: 10rem;
+        padding: 0rem;
+    }
 }
