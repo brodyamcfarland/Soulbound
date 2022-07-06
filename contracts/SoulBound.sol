@@ -6,7 +6,7 @@ import "./ERC4973.sol";
 contract SoulBound is ERC4973 {
     address public owner;
     mapping(address => uint256) public walletMints;
-    uint public MaxPerWallet = 2; // This sets Max to 3.
+    uint public MaxPerWallet = 1;
     uint public count;
 
     constructor () ERC4973("Soulbound", "SOUL") {
@@ -16,10 +16,11 @@ contract SoulBound is ERC4973 {
     function burn(uint256 _tokenId) external override {
         require(ownerOf(_tokenId) == msg.sender || msg.sender == owner, "You can't revoke this token");
         _burn(_tokenId);
+        walletMints[msg.sender]--;
     }
 
     function issue(address _issuee, string calldata _uri, string calldata username, string calldata bio) external {
-        require(walletMints[msg.sender] <= MaxPerWallet, "Only 3 Soulbound Accounts Allowed.");
+        require(walletMints[msg.sender] < MaxPerWallet, "Only 1 Soulbound Accounts Allowed.");
         _mint(_issuee, count, _uri, username, bio);
         count += 1;
         walletMints[msg.sender]++;

@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 //======================================CONTRACT CONNECTION============================================================================//
 
-const INFURA_ID = '9c3402c884734a42bd435d171f6b49fa';
+const INFURA_ID = process.env.REACT_APP_API_KEY;
 const provider = new ethers.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/${INFURA_ID}`);
 
 const ABI = [
@@ -21,22 +21,22 @@ const ABI = [
   "function tokenBio(uint256 tokenId) public view returns (string memory)"
 ]
 
-const address = '0x579F5b6282C67A394Ce341BDa1616Af7Ef6BB887'; //Soulbound SC Address
+const address = '0x48F466ef725C256D95C89B2B6822983E7A39B96C'; //Soulbound SC Address
 
 const contract = new ethers.Contract(address, ABI, provider);
 
 const main = async () => {
   const name = await contract.name()
   const symbol = await contract.symbol()
-  const tokenURI = await contract.tokenURI(0)
-  const tokenUsernames = await contract.tokenUsernames(0)
-  const tokenBio = await contract.tokenBio(0)
+  const tokenURI = await contract.tokenURI(1)
+  const tokenUsernames = await contract.tokenUsernames(1)
+  const tokenBio = await contract.tokenBio(1)
   console.log(`\nReading from Smart Contract: ${address}`);
   console.log(`\nName: ${name}`)
   console.log(`\nSymbol: ${symbol}`)
-  console.log(`\nToken Id 0: ${tokenURI}`)
-  console.log(`\nToken Username 0: ${tokenUsernames}`)
-  console.log(`\nToken Bio 0: ${tokenBio}`)
+  console.log(`\nToken URI 1: ${tokenURI}`)
+  console.log(`\nToken Username 1: ${tokenUsernames}`)
+  console.log(`\nToken Bio 1: ${tokenBio}`)
 }
 
 main();
