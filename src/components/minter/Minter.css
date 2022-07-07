@@ -91,6 +91,30 @@
     background-color: transparent;
 }
 
+.check__account {
+    margin-top: 1rem;
+    background-color: #da4b4b;
+    text-shadow: 2px 2px 4px black;
+    align-items: center;
+    text-align: center;
+}
+
+.check__account:hover {
+    background-color: #692828;
+    box-shadow: inset 0px 0px 5px black;
+    color: gray;
+    cursor: pointer;
+}
+
+.account__exists {
+    text-align: center;
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 6px 6px #3bc8ff;
+    margin-top:1.3rem;
+
+} 
+
 /*===================================MEDIA QUERIES==============================================*/
 /*Normal Monitors [1201px -> 1920px]*/ 
 @media only screen and (max-width: 1920px){

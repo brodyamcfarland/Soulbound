@@ -1,4 +1,4 @@
-import { Contract, ethers } from 'ethers';
+import { ethers } from 'ethers';
 import React from 'react'
 import './Minter.css'
 
@@ -10,10 +10,13 @@ type Props = {
   setTokenBio: React.Dispatch<React.SetStateAction<string>>;
   tokenURI: string;
   setTokenURI: React.Dispatch<React.SetStateAction<string>>;
-  provider: ethers.providers.JsonRpcProvider
+  provider: ethers.providers.JsonRpcProvider;
+  contract: ethers.Contract;
+  tokenId: any;
+  setTokenId: React.Dispatch<React.SetStateAction<any>>;
 }
 
-const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio, tokenURI, setTokenURI}: Props) => {
+const Minter = ({ account, tokenUsername, setTokenUsername, tokenBio, setTokenBio, tokenURI, setTokenURI, contract, tokenId, setTokenId  }: Props) => {
 
   const ABI = ["function issue(address _issuee, string _uri, string username, string bio) external"];
 
@@ -30,12 +33,25 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
   }
 
   const issue = async () => {
-    console.log(account);
+    console.log(account[0]);
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const contract = new ethers.Contract('0xeB1571e421c55cCB15bdE06FCC7c7A6A886414Ef', ABI, provider.getSigner());
     console.log(contract.interface);
     await contract.issue(account[0], tokenURI, tokenUsername, tokenBio);
   }
+
+  const loadTokenId = async () => {
+    if (account !== '') {
+      console.log(account[0]);
+      let myToken = await contract.getTokenId(account[0]);
+      let myTokenNumber = myToken.toNumber();
+      console.log(myTokenNumber);
+      setTokenId(myTokenNumber);
+    }
+  }
+
+  // console.log("Token ID Saved: " + tokenId);
+  // console.log(tokenId);
 
   return (
     <div className='mint__container'>
@@ -45,7 +61,7 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
           The cost of minting will only be the cost of gas. You will be allowed up to only 1 Account per Wallet.
           <br/> Choose your username, a short bio, and an IPFS Image URI. The IPFS image URI will require you to upload a photo on IPFS and paste the URI here. Tokens can be burned and re-minted.
         </article>
-        <article className='mint__description__grey'>Click <a href="https://docs.ipfs.io/how-to/best-practices-for-nft-data/#types-of-ipfs-links-and-when-to-use-them#ipfs-uri" target="_blank" className="sc_link">Here</a> to learn more about token URIs and IPFS</article>
+        <article className='mint__description__grey'>Click <a href="https://docs.ipfs.io/how-to/best-practices-for-nft-data/#types-of-ipfs-links-and-when-to-use-them#ipfs-uri" target="_blank" rel="noreferrer" className="sc_link">Here</a> to learn more about token URIs and IPFS</article>
       </div>
       <form className="mint__form" onSubmit={handleSubmit}>
         <div className="mint__form__header">-- SOULBOUND ACCOUNT FORM --</div>
@@ -64,8 +80,15 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
           -- C0NN3CT3D --
         </div>
         <div className='connected__blurb'>
-          Try out your new Soulbound Token over at c0nn3ct3d. c0nn3ct3d is a web3 social media platform that accepts SBT's as login credentials. 
+          Try out your new Soulbound Token over at c0nn3ct3d. c0nn3ct3d is a web3 social media platform that accepts SBT's as login credentials.<br/><br/> Use the below button to verify you have an account, if nothing shows, your account is not valid. (Wallet Must be Connected)
         </div>
+        {tokenId ? (
+          <div className='connected__disconnect'>
+            <span className='account__exists'>Account Exists. SOUL ID: {tokenId}{tokenURI}</span>
+          </div>
+        ) : (
+          <button onClick={loadTokenId} className="check__account">Check SOUL Token ID</button>
+        )}  
         <article className='mint__description__grey'>Click <a href="/" className="sc_link">Here</a> to visit C0NN3CT3D</article>
       </div>
     </div>

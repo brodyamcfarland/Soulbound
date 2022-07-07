@@ -85,7 +85,10 @@
 
 .list__text {
     background-color: transparent;
-    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: .3rem;
+    padding: 0;
 }
 
 /*===================================MEDIA QUERIES==============================================*/

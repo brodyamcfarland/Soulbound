@@ -17,18 +17,20 @@ const Header = ({ account, setAccount }: Props) => {
   
   const isConnected = Boolean(account);
 
-     async function connectAccount() {
+     const connectAccount = async () => {
         if (window.ethereum) {
-            const account = await window.ethereum.request({
+            const ethAccount = await window.ethereum.request({
                 method: "eth_requestAccounts",
             });
-            setAccount(account);
+            await setAccount(ethAccount);
         }
-    }
+      }
+      //Check on state
+      // console.log("If account present, account state is saved: "+ account);
 
-    async function disconnect() {
-      setAccount('');
-    }
+      const disconnect = async () => {
+        setAccount('');
+      }
 
   return (
     <div className='header__container'>
@@ -44,7 +46,7 @@ const Header = ({ account, setAccount }: Props) => {
             <button className='header__disconnect' onClick={disconnect} >Disconnect</button>
           </div>
         ) : (
-          <ConnectButton account={account} setAccount={setAccount} connectAccount={connectAccount}/>
+          <ConnectButton connectAccount={connectAccount}/>
         )}        
     </div>
   )
