@@ -20,7 +20,8 @@ contract SoulBound is ERC4973 {
     }
 
     function issue(address _issuee, string calldata _uri, string calldata username, string calldata bio) external {
-        require(walletMints[msg.sender] < MaxPerWallet, "Only 1 Soulbound Accounts Allowed.");
+        require(_issuee == msg.sender, "You can only create an account for yourself!");
+        require(walletMints[msg.sender] < MaxPerWallet, "Only 1 Soulbound Account Allowed!");
         _mint(_issuee, count, _uri, username, bio);
         count += 1;
         walletMints[msg.sender]++;

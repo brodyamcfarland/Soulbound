@@ -32,7 +32,7 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
   const issue = async () => {
     console.log(account);
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const contract = new ethers.Contract('0x48F466ef725C256D95C89B2B6822983E7A39B96C', ABI, provider.getSigner());
+    const contract = new ethers.Contract('0xeB1571e421c55cCB15bdE06FCC7c7A6A886414Ef', ABI, provider.getSigner());
     console.log(contract.interface);
     await contract.issue(account[0], tokenURI, tokenUsername, tokenBio);
   }
@@ -43,7 +43,7 @@ const Minter = ({account, tokenUsername, setTokenUsername, tokenBio, setTokenBio
         <h1 className='mint__description__header'>-- MINTING --</h1>
         <article className='mint__description__words'>
           The cost of minting will only be the cost of gas. You will be allowed up to only 1 Account per Wallet.
-          <br/> Choose your username, a short bio, and an IPFS Image URI. The IPFS image URI will require you to upload a photo on IPFS and paste the URI here. Tokens can be burned and re-minted (Coming Soon).
+          <br/> Choose your username, a short bio, and an IPFS Image URI. The IPFS image URI will require you to upload a photo on IPFS and paste the URI here. Tokens can be burned and re-minted.
         </article>
         <article className='mint__description__grey'>Click <a href="https://docs.ipfs.io/how-to/best-practices-for-nft-data/#types-of-ipfs-links-and-when-to-use-them#ipfs-uri" target="_blank" className="sc_link">Here</a> to learn more about token URIs and IPFS</article>
       </div>
