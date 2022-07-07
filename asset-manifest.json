@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Soulbound/static/css/main.7bca34ba.css",
-    "main.js": "/Soulbound/static/js/main.ea38c007.js",
+    "main.css": "/Soulbound/static/css/main.45e22d8b.css",
+    "main.js": "/Soulbound/static/js/main.34d24202.js",
     "static/media/Banner.gif": "/Soulbound/static/media/Banner.c921b1f880eca1e42df7.gif",
     "index.html": "/Soulbound/index.html",
-    "main.7bca34ba.css.map": "/Soulbound/static/css/main.7bca34ba.css.map",
-    "main.ea38c007.js.map": "/Soulbound/static/js/main.ea38c007.js.map"
+    "main.45e22d8b.css.map": "/Soulbound/static/css/main.45e22d8b.css.map",
+    "main.34d24202.js.map": "/Soulbound/static/js/main.34d24202.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bca34ba.css",
-    "static/js/main.ea38c007.js"
+    "static/css/main.45e22d8b.css",
+    "static/js/main.34d24202.js"
   ]
 }
