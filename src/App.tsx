@@ -19,7 +19,8 @@ const ABI = [
   "function tokenURI(uint256 tokenId) external view returns (string memory)", //to get Profile Image
   "function tokenUsernames(uint256 tokenId) public view returns (string memory)", // to get Username
   "function tokenBio(uint256 tokenId) public view returns (string memory)", // To get Bio
-  "function getTokenId(address _address) public view returns (uint)" // To get Token ID
+  "function getTokenId(address _address) public view returns (uint)", // To get Token ID
+  "function burn(uint256 _tokenId) external", //to burn token *only owner can burn*
 ]
 
 const address = '0xeB1571e421c55cCB15bdE06FCC7c7A6A886414Ef'; //Soulbound SC Address v3

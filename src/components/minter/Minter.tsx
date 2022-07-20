@@ -84,12 +84,12 @@ const Minter = ({ account, tokenUsername, setTokenUsername, tokenBio, setTokenBi
         </div>
         {tokenId ? (
           <div className='connected__disconnect'>
-            <span className='account__exists'>Account Exists. SOUL ID: {tokenId}{tokenURI}</span>
+            <span className='account__exists'>Account Exists. SOUL ID: {tokenId}</span>
           </div>
         ) : (
           <button onClick={loadTokenId} className="check__account">Check SOUL Token ID</button>
         )}  
-        <article className='mint__description__grey'>Click <a href="/" className="sc_link">Here</a> to visit C0NN3CT3D</article>
+        <article className='mint__description__grey'>Click <a href="https://brodyamcfarland.github.io/c0nn3ct3d/" target="_" className="sc_link">Here</a> to visit C0NN3CT3D</article>
       </div>
     </div>
   )
